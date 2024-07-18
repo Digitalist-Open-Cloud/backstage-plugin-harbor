@@ -2,7 +2,9 @@ HARBOR_USERNAME: &HARBOR_USERNAME admin
 HARBOR_PASSWORD: &HARBOR_PASSWORD eFQ4tPvqXOF9Z!48
 
 app:
+  title: Harbor Example App
   baseUrl: http://localhost:3000
+
 
 backend:
   baseUrl: http://localhost:7000
