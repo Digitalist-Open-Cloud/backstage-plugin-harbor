@@ -14,7 +14,7 @@ yarn --cwd packages/app add @digitalist-open-cloud/backstage-plugin-harbor
 
 ```ts
 // packages/app/src/plugins.ts
-export { plugin as harbor } from '@digitalist-open-cloud/backstage-plugin-harbor'
+export { harborPlugin as harbor } from '@digitalist-open-cloud/backstage-plugin-harbor'
 ```
 
 ```ts
