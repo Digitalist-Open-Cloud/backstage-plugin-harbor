@@ -11,7 +11,7 @@ import {
 } from '../useHarborAppData'
 import { InfoCard } from '@backstage/core-components'
 
-const Widget = ({ entity, width, height }: { entity: Entity, width?: number, height?: number }) => {
+const Widget = ({ entity }: { entity: Entity, width?: number, height?: number }) => {
   const { repositorySlug } = useHarborAppData({ entity })
 
   return (
