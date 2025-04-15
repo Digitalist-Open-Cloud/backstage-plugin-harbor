@@ -17,24 +17,23 @@ const Widget = ({ entity, width, height }: { entity: Entity, width?: number, hei
   return (
     <InfoCard title="Vulnerabilities in latest image" variant="gridItem">
       <Grid item xs={12}>
-        {repositorySlug.split(', ').map((slug) => {
-          const info = slug.split('/')
-          const host: string = info.length > 2 ? info.shift() as string : ''
-          const project: string = info.shift() as string
-          const repository: string = info.join('/')
+        {repositorySlug.split(', ').map(slug => {
+          const info = slug.split('/');
+          const host: string = info.length > 2 ? (info.shift() as string) : '';
+          const project: string = info.shift() as string;
+          const repository: string = info.join('/');
+          const key = [host, project, repository].join('/');
 
           return (
-            <Grid item xs={12}>
+            <Grid item xs={12} key={key}>
               <HarborRepository
                 host={host}
                 project={project}
                 repository={repository}
                 widget
-                width={width}
-                height={height}
               />
             </Grid>
-          )
+          );
         })}
       </Grid>
     </InfoCard>
