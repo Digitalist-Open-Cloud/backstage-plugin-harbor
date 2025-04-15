@@ -2,11 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-plugin-harbor
-  annotations: 
-    github.com/project-slug: BESTSELLER/backstage-plugin-harbor
-    circleci.com/project-slug: github/BESTSELLER/backstage-plugin-harbor
-    sonarqube.org/project-key: BESTSELLER_backstage-plugin-harbor
+  description: Frontend plugin to Backstage for Harbor integration.
+  annotations:
+    github.com/project-slug: Digitalist-Open-Cloud/Backstage-Plugin-Harbor/
 spec:
   type: library
   lifecycle: production
-  owner: engineering-services
+  owner: digitalist-open-cloud
