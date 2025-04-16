@@ -1,0 +1,35 @@
+name: sbom
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  security:
+    name: SBOM creation and upload
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Trivy SBOM creation
+        uses: aquasecurity/trivy-action@0.29.0
+        id: trivy
+        env:
+          TRIVY_SKIP_DB_UPDATE: true
+          TRIVY_SKIP_JAVA_DB_UPDATE: true
+        with:
+          scan-type: 'repo'
+          format: cyclonedx
+          output: 'dependency-results.sbom.json'
+          scan-ref: .
+
+      - name: Upload to DependencyTrack
+        uses: DependencyTrack/gh-upload-sbom@v3
+        id: upload
+        with:
+          serverhostname: ${{ secrets.SERVER }}
+          apikey: ${{ secrets.DT_KEY }}
+          projectname: 'BackstagePluginHarbor'
+          projectversion: ${{ github.head_ref || github.ref_name }}
+          bomfilename: "dependency-results.sbom.json"
+          autocreate: true
