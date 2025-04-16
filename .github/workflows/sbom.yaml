@@ -27,7 +27,7 @@ jobs:
         uses: DependencyTrack/gh-upload-sbom@v3
         id: upload
         with:
-          serverhostname: ${{ secrets.SERVER }}
+          serverhostname: ${{ secrets.DT_SERVER }}
           apikey: ${{ secrets.DT_KEY }}
           projectname: 'BackstagePluginHarbor'
           projectversion: ${{ github.head_ref || github.ref_name }}
