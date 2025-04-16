@@ -20,12 +20,11 @@ jobs:
         uses: aquasecurity/trivy-action@0.29.0
         id: trivy-scan
         with:
-          scan-type: 'fs'
+          scan-type: 'repo'
           ignore-unfixed: true
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL'
-          skip-setup-trivy: true
       - name: Trivy SBOM creation
         uses: aquasecurity/trivy-action@0.29.0
         id: trivy
