@@ -2,7 +2,6 @@ import { Entity } from '@backstage/catalog-model'
 import { MissingAnnotationEmptyState } from '@backstage/plugin-catalog-react'
 import { useEntity } from '@backstage/plugin-catalog-react'
 import { Grid } from '@material-ui/core'
-import React from 'react'
 import { isHarborAvailable } from '../../plugin'
 import { HarborRepository } from '../HarborRepository'
 import {
