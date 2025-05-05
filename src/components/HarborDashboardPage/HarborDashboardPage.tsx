@@ -1,5 +1,4 @@
 import { useEntity } from '@backstage/plugin-catalog-react'
-import React from 'react'
 import { HarborRepository } from '../HarborRepository'
 import { useHarborAppData } from '../useHarborAppData'
 import { Grid } from '@material-ui/core'

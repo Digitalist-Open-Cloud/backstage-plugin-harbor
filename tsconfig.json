@@ -3,6 +3,7 @@
   "include": ["src", "dev"],
   "compilerOptions": {
     "outDir": "dist-types/",
-    "incremental": false
+    "incremental": false,
+    "jsx": "react-jsx"
   }
 }

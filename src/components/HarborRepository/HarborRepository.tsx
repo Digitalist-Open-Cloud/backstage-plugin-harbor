@@ -1,6 +1,6 @@
 import { Progress, Table } from '@backstage/core-components'
 import { configApiRef, fetchApiRef, useApi } from '@backstage/core-plugin-api'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ReactSpeedometer from 'react-d3-speedometer'
 import { useAsync } from 'react-use'
 import { columns } from './tableHeadings'
