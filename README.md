@@ -54,8 +54,8 @@ See [backstage-plugin-harbor-backend](https://github.com/Digitalist-Open-Cloud/b
 
 ## Contributing
 
-Please contribute back to the [original repo](https://github.com/container-registry/), and you are free to use any code from this repo to contribute back to the original repo without giving us credit.
+Please contribute back to the [original repo](https://github.com/container-registry/backstage-plugin-harbor/tree/master), and you are free to use any code from this repo to contribute back to the original repo without giving us credit.
 
 ## History
 
-This Backstage plugin was initially created by [BESTSELLER](https://github.com/BESTSELLER) and transferred to [Container Registry](https://github.com/container-registry/). This fork was started because of an acute need.
+This Backstage plugin was initially created by [BESTSELLER](https://github.com/BESTSELLER) and transferred to [Container Registry](https://github.com/container-registry/).
