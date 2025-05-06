@@ -5,6 +5,8 @@ import '@testing-library/jest-dom';
 import { HarborDashboardPage } from './HarborDashboardPage';
 import { EntityProvider } from '@backstage/plugin-catalog-react';
 
+global.TextEncoder = require('util').TextEncoder;
+
 // Explicit mocks clearly set
 jest.mock('../useHarborAppData', () => ({
   useHarborAppData: jest.fn(),
