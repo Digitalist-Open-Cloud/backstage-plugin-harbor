@@ -4,6 +4,7 @@
   "compilerOptions": {
     "outDir": "dist-types/",
     "incremental": false,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "allowUmdGlobalAccess": true,
   }
 }

@@ -7,6 +7,7 @@ import { TestApiProvider } from '@backstage/test-utils';
 import { EntityProvider } from '@backstage/plugin-catalog-react';
 import { catalogApiRef } from '@backstage/plugin-catalog-react';
 import { Entity } from '@backstage/catalog-model';
+
 global.TextEncoder = require('util').TextEncoder;
 
 jest.mock('../useHarborAppData', () => ({
@@ -33,7 +34,6 @@ jest.mock('@backstage/plugin-catalog-react', () => ({
 
 import { useHarborAppData } from '../useHarborAppData';
 import { isHarborAvailable } from '../../plugin';
-import React from 'react';
 
 describe('HarborWidget', () => {
   const entityWithAnnotation: Entity = {
